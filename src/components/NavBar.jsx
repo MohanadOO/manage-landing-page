@@ -16,7 +16,7 @@ function NavBar() {
       </ul>
 
       {/* Desktop Navigation */}
-      <ul className='hidden sm:flex gap-4 md:gap-5 md:mx-10 lg:mx-24 xl:mx-36 md:py-6 md:px-0 p-6 items-center'>
+      <ul className='hidden sm:flex gap-4 md:gap-5 md:mx-10 lg:mx-24 xl:mx-36 md:py-6 lg:py-14 md:px-0 p-6 items-center'>
         <li className='w-32'>
           <img src='/images/logo.svg' alt='main_logo' />
         </li>

@@ -55,8 +55,8 @@ function Footer() {
           </p>
         </div>
 
-        <ul className='flex my-10 lg:my-0 justify-between sm:justify-around text-sm lg:order-2 lg:flex-1'>
-          <div className='flex flex-col gap-4'>
+        <div className='flex my-10 lg:my-0 justify-between sm:justify-around text-sm lg:order-2 lg:flex-1'>
+          <ul className='flex flex-col gap-4'>
             <li>
               <a
                 className='hover:text-primary-red-200 transition-colors'
@@ -89,8 +89,8 @@ function Footer() {
                 About Us
               </a>
             </li>
-          </div>
-          <div className='flex flex-col gap-4'>
+          </ul>
+          <ul className='flex flex-col gap-4'>
             <li>
               <a
                 className='hover:text-primary-red-200 transition-colors'
@@ -115,8 +115,8 @@ function Footer() {
                 Privacy Policy
               </a>
             </li>
-          </div>
-        </ul>
+          </ul>
+        </div>
 
         <div className='lg:flex lg:flex-col lg:justify-between lg:self-stretch'>
           <div

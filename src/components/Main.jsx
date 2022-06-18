@@ -2,12 +2,12 @@ import Feature from './Feature'
 
 function Main() {
   return (
-    <main className='my-16 md:mx-10 lg:mx-24 xl:mx-36 md:flex md:items-baseline relative'>
-      <div>
-        <h1 className='mx-6 md:mx-0 text-center md:text-left text-3xl md:text-4xl font-bold mb-4'>
+    <main className='my-16 md:mx-10 lg:mx-24 xl:mx-36 md:flex md:items-baseline xl:justify-between relative'>
+      <div className='xl:max-w-lg'>
+        <h1 className='mx-6 md:mx-0 text-center md:text-left text-3xl md:text-4xl xl:text-[40px] font-bold mb-4'>
           What’s different about Manage?
         </h1>
-        <p className='text-center md:text-left mx-7 md:mx-0 text-sm text-neutral-gray-blue-600 leading-6'>
+        <p className='text-center md:text-left mx-7 md:mx-0 text-sm text-neutral-gray-blue-600 leading-6 xl:mr-20'>
           Manage provides all the functionality your team needs, without the
           complexity. Our software is tailor-made for modern digital product
           teams.
@@ -18,7 +18,7 @@ function Main() {
           alt='tablet_pattern'
         />
       </div>
-      <div>
+      <div className='xl:max-w-lg'>
         <Feature
           number={'01'}
           title={'Track company-wide progress'}

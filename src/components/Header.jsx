@@ -11,8 +11,8 @@ function Header() {
         src='/images/bg-tablet-pattern.svg'
         alt='tablet_pattern'
       />
-      <div className='md:max-w-sm relative'>
-        <h1 className='text-3xl md:text-4xl font-bold mb-3'>
+      <div className='md:max-w-sm lg:max-w-md relative'>
+        <h1 className='text-3xl md:text-4xl xl:text-5xl font-bold mb-3'>
           Bring everyone together to build better products.
         </h1>
         <p className='text-neutral-gray-blue-600 leading-6 text-sm'>
