@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply bg-primary-red-200;
+}
+
+.swiper-pagination-bullet {
+  @apply border-2 border-primary-red-200 bg-transparent;
+}
+
+.swiper {
+  /* overflow: visible; */
+}
+
+/* .swiper-slide {
+  overflow-x: visible;
+  overflow-y: visible;
+} */
+
+@layer base {
+  html {
+    font-family: Be Vietnam Pro, system-ui, sans-serif;
+    @apply bg-neutral-gray-200 scroll-smooth text-primary-blue-600 bg-mobile sm:bg-desktop;
+  }
+}
