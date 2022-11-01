@@ -1,6 +1,11 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 function Footer() {
+  const { t } = useTranslation(['translation', 'common'])
+  const tNavigation = (translate) => t(`navigation.${translate}`)
+  const tFooter = (translate) => t(`footer.${translate}`)
+
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState(false)
 
@@ -15,12 +20,10 @@ function Footer() {
 
   return (
     <footer>
-      <div className='bg-primary-red-200 text-white text-center py-20 px-10 mt-10 md:flex md:items-center md:justify-between md:px-10 lg:px-24 xl:px-36 md:text-left'>
-        <h2 className='text-4xl font-medium md:max-w-md'>
-          Simplify how your team works today.
-        </h2>
+      <div className='bg-primary-red-200 text-white text-center py-20 px-10 mt-10 md:flex md:items-center md:justify-between md:px-10 lg:px-24 xl:px-36 ltr:md:text-left rtl:md:text-right'>
+        <h2 className='text-4xl font-medium md:max-w-md'>{tFooter('title')}</h2>
         <button className='text-sm mt-5 md:mt-0 text-primary-red-200 bg-white py-3 px-8 rounded-full font-medium hover:text-primary-red-200/80 transition-colors'>
-          Get Started
+          {t('common:getStarted')}
         </button>
       </div>
       <div className='bg-neutral-blue-800 text-neutral-red-800 p-10 flex flex-col lg:flex-row lg:items-start md:px-10 lg:px-24 xl:px-36 lg:justify-between'>
@@ -30,7 +33,7 @@ function Footer() {
             className='flex justify-center gap-3 relative'
           >
             <input
-              placeholder='Updates in your inbox...'
+              placeholder={t('common:emailPlaceholder')}
               className={`rounded-full text-neutral-gray-blue-600 text-sm pl-5 pr-10 ${
                 emailError ? 'focus:outline-none border-2 border-red-500 ' : ''
               }`}
@@ -42,16 +45,16 @@ function Footer() {
               type='submit'
               className='text-sm bg-primary-red-200 text-white py-3 px-8 md:px-6 rounded-full hover:bg-primary-red-200/90 hover:brightness-125 transition-all'
             >
-              Go
+              {t('common:go')}
             </button>
             {emailError && (
               <span className='absolute top-14 left-2 text-red-500 text-sm'>
-                Please enter a valid email
+                {t('common:emailError')}
               </span>
             )}
           </form>
           <p className='self-end text-xs text-neutral-gray-blue-600 hidden lg:block'>
-            Copyright 2020. All Rights Reserved
+            {tFooter('copyRight')}
           </p>
         </div>
 
@@ -62,7 +65,7 @@ function Footer() {
                 className='hover:text-primary-red-200 transition-colors'
                 href='#'
               >
-                Home
+                {tNavigation('home')}
               </a>
             </li>
             <li>
@@ -70,7 +73,7 @@ function Footer() {
                 className='hover:text-primary-red-200 transition-colors'
                 href='#'
               >
-                Pricing
+                {tNavigation('price')}
               </a>
             </li>
             <li>
@@ -78,7 +81,7 @@ function Footer() {
                 className='hover:text-primary-red-200 transition-colors'
                 href='#'
               >
-                Products
+                {tNavigation('product')}
               </a>
             </li>
             <li>
@@ -86,7 +89,7 @@ function Footer() {
                 className='hover:text-primary-red-200 transition-colors'
                 href='#'
               >
-                About Us
+                {tNavigation('about')}
               </a>
             </li>
           </ul>
@@ -96,7 +99,7 @@ function Footer() {
                 className='hover:text-primary-red-200 transition-colors'
                 href='#'
               >
-                Careers
+                {tNavigation('careers')}
               </a>
             </li>
             <li>
@@ -104,7 +107,7 @@ function Footer() {
                 className='hover:text-primary-red-200 transition-colors'
                 href='#'
               >
-                Community
+                {tNavigation('community')}
               </a>
             </li>
             <li>
@@ -112,7 +115,7 @@ function Footer() {
                 className='hover:text-primary-red-200 transition-colors'
                 href='#'
               >
-                Privacy Policy
+                {tNavigation('privacy')}
               </a>
             </li>
           </ul>
@@ -158,7 +161,7 @@ function Footer() {
         </div>
 
         <p className='self-center text-xs text-neutral-gray-blue-600 lg:hidden'>
-          Copyright 2020. All Rights Reserved
+          {tFooter('copyRight')}
         </p>
       </div>
     </footer>
