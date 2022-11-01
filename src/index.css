@@ -12,18 +12,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply border-2 border-primary-red-200 bg-transparent;
 }
 
-.swiper {
-  /* overflow: visible; */
-}
-
-/* .swiper-slide {
-  overflow-x: visible;
-  overflow-y: visible;
-} */
-
 @layer base {
   html {
-    font-family: Be Vietnam Pro, system-ui, sans-serif;
+    font-family: Be Vietnam Pro, Tajawal, system-ui, sans-serif;
     @apply bg-neutral-gray-200 scroll-smooth text-primary-blue-600 bg-mobile sm:bg-desktop;
   }
 }
