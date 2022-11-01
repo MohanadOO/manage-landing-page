@@ -39,7 +39,9 @@ function Reviews() {
             <div className='bg-neutral-gray-blue-600/5 flex flex-col items-center justify-center pb-10 px-4'>
               <img
                 className='w-16 -translate-y-7'
-                src={`/images/avatar-${review.name.split(' ')[0]}.png`}
+                src={`/images/avatar-${review.name
+                  .split(' ')[0]
+                  .toLowerCase()}.png`}
                 alt={`avatar_${review.name}`}
               />
               <p className='font-bold mb-3'>{review.name}</p>
